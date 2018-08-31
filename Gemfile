@@ -9,7 +9,6 @@ end
 
 ruby '2.5.1'
 
-gem 'autoprefixer-rails'
 gem 'bootsnap', require: false
 gem 'flutie'
 gem 'honeybadger'
