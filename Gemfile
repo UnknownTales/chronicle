@@ -55,6 +55,8 @@ gem 'capybara-selenium', group: :test
 gem 'chromedriver-helper', group: :test
 gem 'delayed_job_active_record'
 gem 'factory_bot_rails', group: %i[development test]
+gem 'haml', '~> 5.0.4'
+gem 'haml-rails', '~> 1.0.0'
 gem 'high_voltage'
 gem 'rack-timeout', group: :production
 gem 'rspec-rails', '~> 3.6', group: %i[development test]
