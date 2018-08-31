@@ -48,7 +48,7 @@ group :test do
   gem 'webmock'
 end
 
-gem 'suspenders', group: %i[development test]
+gem 'suspenders', group: %i[development]
 
 gem 'bullet', group: %i[development test]
 gem 'capybara-selenium', group: :test
