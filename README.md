@@ -1,3 +1,4 @@
+[![Build Status](https://semaphoreci.com/api/v1/limeblast/chronicle/branches/master/badge.svg)](https://semaphoreci.com/limeblast/chronicle)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5625ecc91b5bc8ef09c9/maintainability)](https://codeclimate.com/github/UnknownTales/chronicle/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5625ecc91b5bc8ef09c9/test_coverage)](https://codeclimate.com/github/UnknownTales/chronicle/test_coverage)
 
