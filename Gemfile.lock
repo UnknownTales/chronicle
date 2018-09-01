@@ -175,6 +175,8 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    nyan-cat-formatter (0.12.0)
+      rspec (>= 2.99, >= 2.14.2, < 4)
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
@@ -362,6 +364,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   listen
+  nyan-cat-formatter
   pg (~> 0.18)
   pry-byebug
   pry-rails

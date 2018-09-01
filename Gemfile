@@ -47,6 +47,7 @@ group :test do
   gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
+  gem "nyan-cat-formatter"
 end
 
 gem "bullet", group: %i[development test]
