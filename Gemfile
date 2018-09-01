@@ -35,6 +35,8 @@ group :development, :test do
   gem "awesome_print"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "dotenv-rails"
+  gem "guard", "~> 2.14.2"
+  gem "guard-rspec", "~> 4.7.3", require: false
   gem "pry-byebug"
   gem "pry-rails"
 end
