@@ -62,7 +62,6 @@ gem "haml-rails", "~> 1.0.0"
 gem "high_voltage"
 gem "rack-timeout", group: :production
 gem "rspec-rails", "~> 3.6", group: %i[development test]
-gem "rubocop-rails_config", "~> 0.2.3"
 gem "shoulda-matchers", group: :test
 gem "simple_form"
 gem "spring-commands-rspec", group: :development
