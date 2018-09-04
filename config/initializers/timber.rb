@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Timber.io Ruby Configuration - Simple Structured Logging
 #
 #  ^  ^  ^   ^      ___I_      ^  ^   ^  ^  ^   ^  ^
@@ -20,4 +22,3 @@ config.integrations.action_view.silence = Rails.env.production?
 #
 # For a full list of configuration options see:
 # http://www.rubydoc.info/github/timberio/timber-ruby/Timber/Config
-
