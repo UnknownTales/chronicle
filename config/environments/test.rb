@@ -17,4 +17,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "www.example.com" }
   config.action_mailer.asset_host = "http://www.example.com"
   config.active_job.queue_adapter = :inline
+
+  # Install the Timber.io logger
+  # ----------------------------
+  # `nil` is passed to disable logging. It's important to keep the `Timber::Logger`
+  # because it provides an API for logging structured data and capturing context.
+  logger = Timber::Logger.new(nil)
+  logger.level = config.log_level
+  config.logger = ActiveSupport::TaggedLogging.new(logger)
 end

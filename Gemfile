@@ -66,3 +66,4 @@ gem "rubocop-rails_config", "~> 0.2.3"
 gem "shoulda-matchers", group: :test
 gem "simple_form"
 gem "spring-commands-rspec", group: :development
+gem "timber", "~> 2.6.1"

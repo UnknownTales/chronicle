@@ -33,4 +33,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: ENV.fetch("APPLICATION_HOST") }
   config.action_mailer.asset_host = ENV.fetch("ASSET_HOST", ENV.fetch("APPLICATION_HOST"))
   config.force_ssl = true
+
+  # Install the Timber.io logger, send logs over STDOUT. Actual log delivery
+  # to the Timber service is handled external of this application.
+  logger = Timber::Logger.new(STDOUT)
+  logger.level = config.log_level
+  config.logger = ActiveSupport::TaggedLogging.new(logger)
 end
