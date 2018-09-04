@@ -1,11 +1,53 @@
-database:
-  override:
-  - RAILS_ENV=development bin/setup
-test:
-  override:
-  - COVERAGE=true bin/rake
-deployment:
-  staging:
-    branch: master
-    commands:
-    - bin/deploy staging
+version: 2
+jobs:
+  build:
+    working_directory: ~/chronicle
+    docker:
+    - image: circleci/ruby:2.3.7-node
+      environment:
+        RAILS_ENV: test
+        PGHOST: localhost
+        PGUSER: chroncile
+    - image: postgres:10.5
+      environment:
+        POSTGRES_USER: chroncile
+        POSTGRES_DB: chroncile_test
+        POSTGRES_PASSWORD: ""
+    steps:
+    - checkout
+
+    - run:
+        name: Which Bundler?
+        command: bundle -v
+
+    - restore_cache:
+        keys:
+        - chroncile-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+        - chroncile-
+
+    - run:
+        name: Bundle Install
+        command: |
+          bundle install --deployment \
+                         --retry=3 \
+                         --jobs=3
+
+    - save_cache:
+        key: chroncile-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+        paths:
+        - vendor/bundle
+
+    - run:
+        name: Wait for database
+        command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+    - run:
+        name: Database setup
+        command: RAILS_ENV=development bin/setup
+
+    - run:
+        name: Run tests
+        command: COVERAGE=true bundle exec rake
+
+    - store_artifacts:
+        path: coverage
