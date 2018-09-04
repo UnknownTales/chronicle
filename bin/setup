@@ -34,12 +34,12 @@ else
 fi
 
 
-if heroku join --app chronicle-production > /dev/null 2>&1; then
+if heroku join --app chronicle-prod > /dev/null 2>&1; then
   git remote add production git@heroku.com:chronicle-production.git || true
-  printf 'You are a collaborator on the "chronicle-production" Heroku app
+  printf 'You are a collaborator on the "chronicle-prod" Heroku app
 '
 else
-  printf 'Ask for access to the "chronicle-production" Heroku app
+  printf 'Ask for access to the "chronicle-prod" Heroku app
 '
 fi
 
