@@ -50,6 +50,8 @@ group :test do
   gem "nyan-cat-formatter"
 end
 
+gem "suspenders", group: %i[development test]
+
 gem "bullet", group: %i[development test]
 gem "capybara-selenium", group: :test
 gem "chromedriver-helper", group: :test
