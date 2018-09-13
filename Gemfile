@@ -39,6 +39,7 @@ group :development, :test do
   gem 'guard-rspec', '~> 4.7.3', require: false
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'rspec_junit_formatter'
 end
 
 group :test do

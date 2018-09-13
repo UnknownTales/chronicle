@@ -15,6 +15,13 @@ jobs:
         POSTGRES_PASSWORD: ""
     steps:
     - checkout
+    - run: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+    - run: mkdir ~/rspec
+    - run:
+        command: bundle exec rspec --format progress --format RspecJunitFormatter -o ~/rspec/rspec.xml
+        when: always
+    - store_test_results:
+        path: ~/rspec
 
     - run:
         name: Which Bundler?
