@@ -32,6 +32,21 @@
     },
     "SMTP_USERNAME": {
       "required": true
+    },
+    "HONEYBADGER_API_KEY": {
+      "required": true
+    },
+    "HONEYBADGER_ENV": {
+      "required": true
+    },
+    "SKYLIGHT_AUTHENTICATION": {
+      "required": true
+    },
+    "SKYLIGHT_ENABLED": {
+      "required": true
+    },
+    "SKYLIGHT_ENV": {
+      "required": true
     }
   },
   "addons": [
