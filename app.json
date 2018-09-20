@@ -47,6 +47,9 @@
     },
     "SKYLIGHT_ENV": {
       "required": true
+    },
+    "SENTRY_DSN": {
+      "required": true
     }
   },
   "addons": [
