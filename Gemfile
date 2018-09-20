@@ -11,7 +11,6 @@ ruby '2.5.1'
 
 gem 'bootsnap', require: false
 gem 'flutie'
-gem 'honeybadger'
 gem 'jquery-rails'
 gem 'pg', '~> 0.18'
 gem 'puma'
